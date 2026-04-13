@@ -1,0 +1,28 @@
+# =========================
+# Eclipse
+# =========================
+.project
+.classpath
+.settings/
+
+# =========================
+# Compilados Java
+# =========================
+*.class
+
+# Binarios
+bin/
+out/
+
+# =========================
+# Logs y temporales
+# =========================
+*.log
+*.tmp
+*.swp
+
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
