@@ -10,8 +10,8 @@
 			<property name="jakarta.persistence.jdbc.user" value="root"/>
 			<property name="jakarta.persistence.jdbc.password" value=""/>
 			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="eclipselink.logging.level.sql" value="FINE"/>
-			<property name="eclipselink.logging.parameters" value="true"/>
+			<property name="eclipselink.logging.level.sql" value="SEVERE"/>
+			<property name="eclipselink.logging.parameters" value="false"/>
 		</properties>
 	</persistence-unit>
 </persistence>
