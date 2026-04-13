@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<faceted-project>
-  <runtime name="JRE [21.0.5]"/>
-  <fixed facet="jpt.jpa"/>
-  <fixed facet="java"/>
-  <installed facet="java" version="21"/>
-  <installed facet="jpt.jpa" version="3.1"/>
-</faceted-project>
