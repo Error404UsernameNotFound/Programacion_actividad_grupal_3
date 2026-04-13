@@ -1,34 +1,34 @@
 package modelo.entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "clientes")
 public class Cliente {
 
     @Id
-    @Column(name = "cif", length = 10)
+    @Column(name = "cif")
     private String cif;
-
-    @Column(name = "nombre", length = 20, nullable = false)
+    @Column(name = "nombre")
     private String nombre;
-
-    @Column(name = "apellidos", length = 45, nullable = false)
+    @Column(name = "apellidos")
     private String apellidos;
-
-    @Column(name = "domicilio", length = 100)
+    @Column(name = "domicilio")
     private String domicilio;
-
     @Column(name = "facturacion_anual")
     private double facturacionAnual;
-
     @Column(name = "numero_empleados")
     private int numeroEmpleados;
 
-    public Cliente() {}
+    public Cliente() {
+    }
 
     public Cliente(String cif, String nombre, String apellidos, 
                    String domicilio, double facturacionAnual, int numeroEmpleados) {
+        super();
         this.cif = cif;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -57,6 +57,19 @@ public class Cliente {
     public int getNumeroEmpleados() { return numeroEmpleados; }
     public void setNumeroEmpleados(int numeroEmpleados) { 
         this.numeroEmpleados = numeroEmpleados; 
+    }
+
+    @Override
+    public int hashCode() {
+        return cif != null ? cif.hashCode() : 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Cliente other = (Cliente) obj;
+        return cif != null ? cif.equals(other.cif) : other.cif == null;
     }
 
     @Override
